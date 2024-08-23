@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel left-panel">
+            <img src="imagens/logo1.png" alt="Logo da aplicação" class="logo">
+            <h1>Digite seu texto</h1>
+            <textarea id="input-texto" placeholder="Digite seu texto aqui" aria-label="Área de texto para digitar a mensagem que deseja criptografar ou descriptografar"></textarea>
+            <div id="error-message" class="error-message" role="alert" aria-live="assertive"></div>
+            <div class="buttons">
+                <button id="btn-criptografar" aria-label="Botão para criptografar o texto inserido">Criptografar</button>
+                <button id="btn-descriptografar" aria-label="Botão para descriptografar o texto inserido">Descriptografar</button>
+            </div>
+            <p class="info-message">* Apenas letras minúsculas sem acentos e caracteres especiais.</p>
+        </div>
+        <div class="panel right-panel">
+            <img src="imagens/AI.png" alt="Imagem futurista de um robô digitando em um teclado" class="futuristic-image">
+            <div id="initial-message">
+                <p>Nenhuma mensagem encontrada. <br> Digite um texto que você deseja criptografar ou descriptografar.<br><br></p>
+            </div>
+            <div id="output-area" class="hide" role="region" aria-live="polite">
+                <textarea id="output-texto" readonly placeholder="Aqui aparecerá o texto criptografado ou descriptografado" aria-label="Área de texto onde o resultado aparecerá"></textarea>
+                <button id="btn-copiar" aria-label="Botão para copiar o texto resultante">Copiar</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Siga-me nas redes sociais:</p>
+        <ul class="social-links">
+            <li><a href="https://www.instagram.com/nilrd_" target="_blank" aria-label="Instagram"><img src="imagens/Instagram_icon.png" alt="Instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/nilson-da-silva-brites-6159b6221/" target="_blank" aria-label="LinkedIn"><img src="imagens/linkedin-logo.png" alt="LinkedIn"></a></li>
+        </ul>
+        <p>&copy; 2024 Nilson da Silva Brites / Challenge Oracle ONE - Lógica de Programação</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
