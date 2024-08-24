@@ -19,76 +19,66 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
+    flex-wrap: wrap; 
+    max-width: 950px;
     width: 100%;
+    margin: 1; /*alterei margem*/
+    padding: 10px;
     background-color: rgba(31, 31, 31, 0.9);
-    padding: 15px;
     border-radius: 15px;
     box-shadow: 0 0 15px #00d1ff;
-    overflow-x: hidden;
-    flex: 1;
+    gap: 20px;
     max-height: 85vh;
 }
 
-.panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 10px;
-}
-
 .left-panel, .right-panel {
-    max-height: 100%;
+    flex: 1; 
+    min-width: 80px; 
+    max-height: 80%;
     overflow-y: auto;
-}
-
-.left-panel {
-    flex: 1.5;
-    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 .right-panel {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 15px; 
     border-radius: 15px;
     box-shadow: 0 0 15px #00d1ff;
-    text-align: center;
-    padding: 15px;
 }
 
 .right-panel p {
-    font-size: 0.75rem;
+    font-size: 0.75rem; 
     color: #ffffff;
     margin-top: 4px;
 }
 
 h1 {
-    font-size: 1.4rem;
+    font-size: 1.2rem; 
     color: #00d1ff;
     margin-bottom: 10px;
 }
 
 textarea {
     width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
     padding: 10px;
+    height: 90px; 
+    font-size: 0.85rem; 
+    margin-bottom: 10px;
     border: none;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #00d1ff;
-    font-size: 1rem;
     resize: none;
     box-shadow: inset 0 0 10px #00d1ff;
 }
 
 #output-texto {
-    height: 150px;
+    height: 130px; 
     overflow-y: auto;
     margin-bottom: 10px;
 }
@@ -100,12 +90,12 @@ textarea {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 8px 10px;
     border: none;
     border-radius: 10px;
     background: linear-gradient(135deg, #00d1ff, #0066cc);
     color: white;
-    font-size: 1rem;
+    font-size: 0.85rem; 
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -126,27 +116,27 @@ button:focus, textarea:focus {
 }
 
 .logo {
-    max-width: 150px;
-    margin-bottom: 20px;
+    max-width: 140px; 
+    margin-bottom: 15px;
 }
 
 .futuristic-image {
     width: 100%;
-    max-width: 200px;
+    max-width: 180px; 
     margin-bottom: 15px;
     display: block;
 }
 
 .error-message {
     color: #e74c3c;
-    font-size: 0.85rem;
+    font-size: 0.75rem; 
     margin-top: 5px;
     display: none;
 }
 
 .info-message {
     color: #00d1ff;
-    font-size: 0.85rem;
+    font-size: 0.75rem; 
     margin-top: 5px;
     display: inline-block;
     text-align: left;
@@ -154,12 +144,12 @@ button:focus, textarea:focus {
 
 #btn-copiar {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     margin-top: 5px;
     border-radius: 10px;
     background: linear-gradient(135deg, #00d1ff, #0066cc);
     color: white;
-    font-size: 1rem;
+    font-size: 0.85rem;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -180,7 +170,7 @@ footer {
     color: #e0e0e0;
     text-align: center;
     padding: 10px 0;
-    font-size: 0.75rem;
+    font-size: 0.75rem; 
     border-top: none;
     width: 100%;
     border-radius: 10px;
@@ -205,7 +195,7 @@ footer {
 }
 
 .social-links img {
-    width: 18px;
+    width: 18px; 
     height: 18px;
     filter: none;
     transition: none;
@@ -222,54 +212,54 @@ footer p {
     transform: scale(1.3);
 }
 
-/* Media Queries para Responsividade */
-/* Media Query para Tablets */
+/* Media Query para Tablets (até 768px) */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        max-width: 100%;
         padding: 10px;
+        gap: 15px; 
     }
 
     .left-panel, .right-panel {
-        margin-right: 0;
-        width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        width: 100%; 
     }
 
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.2rem; 
         text-align: center;
     }
 
     textarea {
-        height: 80px;
-        font-size: 0.875rem;
+        height: 70px;
+        font-size: 0.875rem; 
     }
 
     .buttons {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     button {
         font-size: 0.875rem;
-        padding: 8px;
-        width: 100%;
+        padding: 10px;
+        width: 100%; 
     }
 
     .futuristic-image {
-        max-width: 150px;
+        max-width: 150px; 
+        margin: auto;
     }
 }
 
-/* Media Query para Smartphones */
+/* Media Query para Smartphones (até 480px) */
 @media (max-width: 480px) {
     .container {
-        padding: 10px;
+        padding: 10px; 
     }
 
     h1 {
-        font-size: 1rem;
+        font-size: 1rem; 
     }
 
     textarea {
@@ -278,11 +268,22 @@ footer p {
     }
 
     .futuristic-image {
-        max-width: 100px;
+        max-width: 100px; 
+        margin: auto;
     }
 
     .info-message {
         font-size: 0.75rem;
         text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column; 
+    }
+
+    button {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 8px;
     }
 }
