@@ -19,66 +19,76 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* Permite que os elementos se reorganizem em telas menores */
+    justify-content: space-between;
     max-width: 1200px;
     width: 100%;
-    margin: auto;
-    padding: 20px;
     background-color: rgba(31, 31, 31, 0.9);
+    padding: 15px;
     border-radius: 15px;
     box-shadow: 0 0 15px #00d1ff;
-    gap: 20px;
+    overflow-x: hidden;
+    flex: 1;
     max-height: 85vh;
 }
 
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
 .left-panel, .right-panel {
-    flex: 1; /* Permite que os painéis se ajustem proporcionalmente */
-    min-width: 300px; /* Garante que os painéis tenham um tamanho mínimo */
     max-height: 100%;
     overflow-y: auto;
-    margin-bottom: 20px;
+}
+
+.left-panel {
+    flex: 1.5;
+    margin-right: 10px;
 }
 
 .right-panel {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    padding: 15px; 
     border-radius: 15px;
     box-shadow: 0 0 15px #00d1ff;
+    text-align: center;
+    padding: 15px;
 }
 
 .right-panel p {
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
     color: #ffffff;
     margin-top: 4px;
 }
 
 h1 {
-    font-size: 1.2rem; 
+    font-size: 1.4rem;
     color: #00d1ff;
     margin-bottom: 10px;
 }
 
 textarea {
     width: 100%;
-    padding: 10px;
-    height: 90px; 
-    font-size: 0.85rem; 
+    height: 100px;
     margin-bottom: 10px;
+    padding: 10px;
     border: none;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #00d1ff;
+    font-size: 1rem;
     resize: none;
     box-shadow: inset 0 0 10px #00d1ff;
 }
 
 #output-texto {
-    height: 130px; 
+    height: 150px;
     overflow-y: auto;
     margin-bottom: 10px;
 }
@@ -90,12 +100,12 @@ textarea {
 }
 
 button {
-    padding: 8px 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
     background: linear-gradient(135deg, #00d1ff, #0066cc);
     color: white;
-    font-size: 0.85rem; 
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -116,27 +126,27 @@ button:focus, textarea:focus {
 }
 
 .logo {
-    max-width: 140px; 
-    margin-bottom: 15px;
+    max-width: 150px;
+    margin-bottom: 20px;
 }
 
 .futuristic-image {
     width: 100%;
-    max-width: 180px; 
+    max-width: 200px;
     margin-bottom: 15px;
     display: block;
 }
 
 .error-message {
     color: #e74c3c;
-    font-size: 0.75rem; 
+    font-size: 0.85rem;
     margin-top: 5px;
     display: none;
 }
 
 .info-message {
     color: #00d1ff;
-    font-size: 0.75rem; 
+    font-size: 0.85rem;
     margin-top: 5px;
     display: inline-block;
     text-align: left;
@@ -144,12 +154,12 @@ button:focus, textarea:focus {
 
 #btn-copiar {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     border-radius: 10px;
     background: linear-gradient(135deg, #00d1ff, #0066cc);
     color: white;
-    font-size: 0.85rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -170,7 +180,7 @@ footer {
     color: #e0e0e0;
     text-align: center;
     padding: 10px 0;
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
     border-top: none;
     width: 100%;
     border-radius: 10px;
@@ -195,7 +205,7 @@ footer {
 }
 
 .social-links img {
-    width: 18px; 
+    width: 18px;
     height: 18px;
     filter: none;
     transition: none;
@@ -212,54 +222,54 @@ footer p {
     transform: scale(1.3);
 }
 
-/* Media Query para Tablets (até 768px) */
+/* Media Queries para Responsividade */
+/* Media Query para Tablets */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        max-width: 100%;
         padding: 10px;
-        gap: 15px; /* Reduz o espaçamento entre os elementos em telas menores */
     }
 
     .left-panel, .right-panel {
-        margin-bottom: 15px;
-        width: 100%; /* Garante que os painéis ocupem toda a largura disponível */
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     h1 {
-        font-size: 1.2rem; /* Fonte um pouco maior para leitura em tablets */
+        font-size: 1.2rem;
         text-align: center;
     }
 
     textarea {
-        height: 70px;
-        font-size: 0.875rem; /* Ajuste do tamanho da fonte */
+        height: 80px;
+        font-size: 0.875rem;
     }
 
     .buttons {
         justify-content: center;
-        flex-wrap: wrap; /* Faz com que os botões se reorganizem em uma coluna se necessário */
     }
 
     button {
         font-size: 0.875rem;
-        padding: 10px;
-        width: 100%; /* Botões ocupam toda a largura em telas menores */
+        padding: 8px;
+        width: 100%;
     }
 
     .futuristic-image {
-        max-width: 150px; /* Ajusta o tamanho da imagem */
-        margin: auto;
+        max-width: 150px;
     }
 }
 
-/* Media Query para Smartphones (até 480px) */
+/* Media Query para Smartphones */
 @media (max-width: 480px) {
     .container {
-        padding: 10px; /* Pequeno padding para telas pequenas */
+        padding: 10px;
     }
 
     h1 {
-        font-size: 1rem; /* Reduz um pouco o tamanho da fonte */
+        font-size: 1rem;
     }
 
     textarea {
@@ -268,22 +278,11 @@ footer p {
     }
 
     .futuristic-image {
-        max-width: 100px; /* Imagem menor para dispositivos móveis */
-        margin: auto;
+        max-width: 100px;
     }
 
     .info-message {
         font-size: 0.75rem;
         text-align: center;
-    }
-
-    .buttons {
-        flex-direction: column; /* Coloca os botões um abaixo do outro */
-    }
-
-    button {
-        width: 100%; /* Garante que os botões usem toda a largura disponível */
-        font-size: 0.8rem;
-        padding: 8px;
     }
 }
