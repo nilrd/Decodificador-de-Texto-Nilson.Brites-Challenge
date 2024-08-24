@@ -212,54 +212,54 @@ footer p {
     transform: scale(1.3);
 }
 
-/* Media Query para Tablets (até 768px) */
+/* Media Queries para Responsividade */
+/* Media Query para Tablets */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        max-width: 100%;
         padding: 10px;
-        gap: 15px; 
     }
 
     .left-panel, .right-panel {
-        margin-bottom: 15px;
-        width: 100%; 
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     h1 {
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
         text-align: center;
     }
 
     textarea {
-        height: 70px;
-        font-size: 0.875rem; 
+        height: 80px;
+        font-size: 0.875rem;
     }
 
     .buttons {
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     button {
         font-size: 0.875rem;
-        padding: 10px;
-        width: 100%; 
+        padding: 8px;
+        width: 100%;
     }
 
     .futuristic-image {
-        max-width: 150px; 
-        margin: auto;
+        max-width: 150px;
     }
 }
 
-/* Media Query para Smartphones (até 480px) */
+/* Media Query para Smartphones */
 @media (max-width: 480px) {
     .container {
-        padding: 10px; 
+        padding: 10px;
     }
 
     h1 {
-        font-size: 1rem; 
+        font-size: 1rem;
     }
 
     textarea {
@@ -268,22 +268,11 @@ footer p {
     }
 
     .futuristic-image {
-        max-width: 100px; 
-        margin: auto;
+        max-width: 100px;
     }
 
     .info-message {
         font-size: 0.75rem;
         text-align: center;
-    }
-
-    .buttons {
-        flex-direction: column; 
-    }
-
-    button {
-        width: 100%;
-        font-size: 0.8rem;
-        padding: 8px;
     }
 }
