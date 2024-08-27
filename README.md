@@ -11,6 +11,7 @@ Este é um projeto desenvolvido como parte do Challenge Oracle ONE - Lógica de 
 - [Contribuição](#contribuição)
 - [Licença](#licença)
 - [Contato](#contato)
+- [Links Importantes](#links-importantes)
 
 ## Funcionalidades
 
@@ -55,6 +56,11 @@ Em caso de dúvidas ou sugestões, entre em contato:
 - **Nome:** Nilson da Silva Brites
 - **E-mail:** nilsondasilvabrites@gmail.com
 - **LinkedIn:** [Nilson da Silva Brites](https://www.linkedin.com/in/nilson-da-silva-brites-6159b6221/)
+
+## Links Importantes
+
+- **Página do GitHub Pages:** [Acesse o Decodificador de Texto](https://nilrd.github.io/Decodificador-de-Texto-Nilson.Brites-Challenge/)
+- **Repositório no GitHub:** [Acesse o Repositório no GitHub](https://github.com/nilrd/Decodificador-de-Texto-Nilson.Brites-Challenge)
 
 ---
 
